@@ -1,0 +1,13 @@
+{
+  "name": "github-search",
+  "version": "1.0.0",
+  "description": "GitHub Search using REST API v3",
+  "main": "index.js",
+  "repository": "https://github.com/Madejczyk/github-search.git",
+  "author": "Madejczyk <jakub.madejczyk92@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "typescript": "3.6.3"
+  }
+}

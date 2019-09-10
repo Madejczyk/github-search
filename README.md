@@ -9,7 +9,7 @@ Use GitHub REST API v3 to create a simple application that allows users to type 
 
 ### ToDo:
 - [ ] Webpack + Babel
-- [ ] TypeScript
+- [x] TypeScript
 - [ ] React
 - [ ] Redux?
 - [ ] Eslint
