@@ -2,7 +2,7 @@
   "name": "github-search",
   "version": "1.0.0",
   "description": "GitHub Search using REST API v3",
-  "main": "index.js",
+  "main": "index.html",
   "repository": "https://github.com/Madejczyk/github-search.git",
   "author": "Madejczyk <jakub.madejczyk92@gmail.com>",
   "license": "MIT",

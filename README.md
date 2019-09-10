@@ -8,9 +8,9 @@ Use GitHub REST API v3 to create a simple application that allows users to type 
   * Up to 3 links to most popular (by starts) user repositories 
 
 ### ToDo:
-- [ ] Webpack + Babel
+- [x] Webpack
 - [x] TypeScript
-- [ ] React
+- [x] React
 - [ ] Redux?
 - [ ] Eslint
 - [ ] Jest
