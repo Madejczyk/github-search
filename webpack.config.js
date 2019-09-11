@@ -1,3 +1,5 @@
+const TSLintPlugin = require('tslint-webpack-plugin');
+
 module.exports = {
     mode: "production",
 
@@ -36,5 +38,11 @@ module.exports = {
     externals: {
         "react": "React",
         "react-dom": "ReactDOM"
-    }
+    },
+
+    plugins: [
+        new TSLintPlugin({
+          files: ['./src/**/*.ts?(x)']
+        })
+    ]
 };

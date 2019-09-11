@@ -12,7 +12,7 @@ Use GitHub REST API v3 to create a simple application that allows users to type 
 - [x] TypeScript
 - [x] React
 - [ ] Redux?
-- [ ] Eslint
+- [x] TSLint / Eslint
 - [ ] Jest
 - [ ] Cypress?
 - [ ] Sass?
@@ -20,4 +20,8 @@ Use GitHub REST API v3 to create a simple application that allows users to type 
 - [ ] Create sample app with fake data
 - [ ] Check https://developer.github.com/v3/
 - [ ] Use data from GitHub API
-  
+- [ ] Offline mode / Cache ?
+- [ ] IndexedDB?
+
+### Run
+Just run npx webpack and open index.html file
