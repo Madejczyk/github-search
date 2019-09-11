@@ -13,7 +13,7 @@ Use GitHub REST API v3 to create a simple application that allows users to type 
 - [x] React
 - [ ] Redux?
 - [x] TSLint / Eslint
-- [ ] Jest + Enzyme
+- [x] Jest + Enzyme
 - [ ] Cypress?
 - [ ] Sass?
 - [ ] Travis?

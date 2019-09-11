@@ -1,3 +1,6 @@
 import * as React from "react";
+import { GithubSearch } from "./github-search/GithubSearch";
 
-export const App = () => <h1>Hello world!</h1>;
+export const App = () => <>
+    <GithubSearch />
+</>;
