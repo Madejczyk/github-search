@@ -13,7 +13,7 @@ Use GitHub REST API v3 to create a simple application that allows users to type 
 - [x] React
 - [ ] Redux?
 - [x] TSLint / Eslint
-- [ ] Jest
+- [ ] Jest + Enzyme
 - [ ] Cypress?
 - [ ] Sass?
 - [ ] Travis?
@@ -24,4 +24,4 @@ Use GitHub REST API v3 to create a simple application that allows users to type 
 - [ ] IndexedDB?
 
 ### Run
-Just run npx webpack and open index.html file
+Just run yarn webpack and open index.html file
