@@ -14,7 +14,7 @@ Use GitHub REST API v3 to create a simple application that allows users to type 
 - [x] TSLint / Eslint
 - [x] Jest + Enzyme
 - [ ] Cypress?
-- [ ] Sass?
+- [x] Sass + Sasslint?
 - [ ] Travis?
 - [ ] Create sample app with fake data
 - [ ] Check https://developer.github.com/v3/
