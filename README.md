@@ -11,7 +11,6 @@ Use GitHub REST API v3 to create a simple application that allows users to type 
 - [x] Webpack
 - [x] TypeScript
 - [x] React
-- [ ] Redux?
 - [x] TSLint / Eslint
 - [x] Jest + Enzyme
 - [ ] Cypress?
@@ -27,6 +26,7 @@ Use GitHub REST API v3 to create a simple application that allows users to type 
 ### Improvments
 - [ ] Offline mode / Cache ?
 - [ ] IndexedDB?
+- [ ] Change to Redux - in on "redux" branch - has problem. Fix probably downgrade react. Make this task as last.
 
 ### Run
 Just run yarn webpack and open index.html file
