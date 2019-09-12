@@ -15,6 +15,8 @@ type GithubSearchState = {
     userName: string,
 };
 
+const USERNAME_REGEX = /^[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}$/i;
+
 export class GithubSearch extends React.PureComponent<{}, GithubSearchState> {
     constructor(props: {}) {
         super(props);
@@ -43,7 +45,9 @@ export class GithubSearch extends React.PureComponent<{}, GithubSearchState> {
                     onChange={this.onChange}
                     value={this.state.userName}
                 />
-                <SubmitButton/>
+                <SubmitButton
+                    isDisabled={!USERNAME_REGEX.test(this.state.userName)}
+                />
             </form>
         );
     }

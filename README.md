@@ -22,7 +22,7 @@ Use GitHub REST API v3 to create a simple application that allows users to type 
 - [ ] Use data from GitHub API
 - [ ] Loading indicator
 - [ ] Error Handler
-- [ ] Validation user name
+- [x] Validation user name
 
 ### Improvments
 - [ ] Offline mode / Cache ?
