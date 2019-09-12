@@ -6,8 +6,9 @@ type SearchInputProps = {
 };
 
 export const SearchInput = (props: SearchInputProps) => <input
+    className="search-input"
     type="text"
-    placeholder="GitHub user name"
+    placeholder="User name"
     value={props.value}
     onChange={props.onChange}
 />;

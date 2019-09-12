@@ -39,7 +39,7 @@ export class GithubSearch extends React.PureComponent<{}, GithubSearchState> {
 
     public render() {
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit} className="github-search">
                 <Title/>
                 <SearchInput
                     onChange={this.onChange}
