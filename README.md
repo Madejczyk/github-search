@@ -19,7 +19,7 @@ Use GitHub REST API v3 to create a simple application that allows users to type 
 - [ ] Create sample app with fake data
 - [ ] Check https://developer.github.com/v3/
 - [ ] Use data from GitHub API
-- [ ] Loading indicator
+- [x] Loading indicator
 - [ ] Error Handler
 - [x] Validation user name
 

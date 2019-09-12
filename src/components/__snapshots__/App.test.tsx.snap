@@ -1,16 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App should contains GitHub search 1`] = `
-<form>
-  <div>
+<form
+  class="github-search"
+>
+  <div
+    class="title"
+  >
     GitHub User details
   </div>
   <input
-    placeholder="GitHub user name"
+    class="search-input"
+    placeholder="User name"
     type="text"
     value=""
   />
   <input
+    class="submit-button"
     disabled=""
     type="submit"
     value="Search"

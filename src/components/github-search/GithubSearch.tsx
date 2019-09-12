@@ -37,6 +37,10 @@ export class GithubSearch extends React.PureComponent<{}, GithubSearchState> {
         event.preventDefault();
     }
 
+    private isSubmitButtonDisabled = () => {
+        return !USERNAME_REGEX.test(this.state.userName) || this.state.loadingState === LoadingState.LOADING;
+    }
+
     public render() {
         return (
             <form onSubmit={this.handleSubmit} className="github-search">
@@ -46,7 +50,8 @@ export class GithubSearch extends React.PureComponent<{}, GithubSearchState> {
                     value={this.state.userName}
                 />
                 <SubmitButton
-                    isDisabled={!USERNAME_REGEX.test(this.state.userName)}
+                    isDisabled={this.isSubmitButtonDisabled()}
+                    text={this.state.loadingState === LoadingState.LOADING ? "Loading ..." : "Search"}
                 />
             </form>
         );

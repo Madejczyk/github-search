@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GithubSearch should has enable search button when username is changed 1`] = `
+<form
+  class="github-search"
+>
+  <div
+    class="title"
+  >
+    GitHub User details
+  </div>
+  <input
+    class="search-input"
+    placeholder="User name"
+    type="text"
+    value="test"
+  />
+  <input
+    class="submit-button"
+    type="submit"
+    value="Search"
+  />
+</form>
+`;
+
+exports[`GithubSearch should initial contains disabled search button 1`] = `
+<form
+  class="github-search"
+>
+  <div
+    class="title"
+  >
+    GitHub User details
+  </div>
+  <input
+    class="search-input"
+    placeholder="User name"
+    type="text"
+    value=""
+  />
+  <input
+    class="submit-button"
+    disabled=""
+    type="submit"
+    value="Search"
+  />
+</form>
+`;

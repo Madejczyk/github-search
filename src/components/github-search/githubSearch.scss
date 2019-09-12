@@ -11,8 +11,8 @@ $size: calc(16px + 16 * ((100vw - 320px) / 680));
   .search-input,
   .submit-button,
   .title {
-    font-size: $size;
     color: $body-color;
+    font-size: $size;
     padding: 8px;
   }
 
