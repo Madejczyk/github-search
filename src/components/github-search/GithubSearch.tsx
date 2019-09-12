@@ -10,7 +10,15 @@ enum LoadingState {
     ERROR = "ERROR",
 }
 
+enum SubmitButtonValue {
+    NOT_LOADED = "Search",
+    LOADING = "Loading ...",
+    LOADED = "Sucess :)",
+    ERROR = "Error :(",
+}
+
 type GithubSearchState = {
+    errorMessage: string,
     loadingState: LoadingState
     userName: string,
 };
@@ -21,6 +29,7 @@ export class GithubSearch extends React.PureComponent<{}, GithubSearchState> {
     constructor(props: {}) {
         super(props);
         this.state = {
+            errorMessage: "",
             loadingState: LoadingState.NOT_LOADED,
             userName: "",
         };
@@ -35,10 +44,30 @@ export class GithubSearch extends React.PureComponent<{}, GithubSearchState> {
     private handleSubmit(event: React.FormEvent<HTMLFormElement>) {
         this.setState({loadingState: LoadingState.LOADING});
         event.preventDefault();
+        this.findUserDetails();
+    }
+
+    private async findUserDetails() {
+        const url = `https://api.github.com/users/${this.state.userName}`;
+        const response = await fetch(url);
+        if (!response.ok) {
+            this.setState({
+                errorMessage: response.statusText,
+                loadingState: LoadingState.ERROR,
+            });
+        } else {
+            const result = await response.json();
+            this.setState({loadingState: LoadingState.LOADED});
+        }
     }
 
     private isSubmitButtonDisabled = () => {
         return !USERNAME_REGEX.test(this.state.userName) || this.state.loadingState === LoadingState.LOADING;
+    }
+
+    private getSubmitButtonMessage = () => {
+        return this.state.loadingState === LoadingState.ERROR ?
+            this.state.errorMessage : SubmitButtonValue[this.state.loadingState];
     }
 
     public render() {
@@ -51,7 +80,7 @@ export class GithubSearch extends React.PureComponent<{}, GithubSearchState> {
                 />
                 <SubmitButton
                     isDisabled={this.isSubmitButtonDisabled()}
-                    text={this.state.loadingState === LoadingState.LOADING ? "Loading ..." : "Search"}
+                    text={this.getSubmitButtonMessage()}
                 />
             </form>
         );

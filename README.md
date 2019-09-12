@@ -16,14 +16,14 @@ Use GitHub REST API v3 to create a simple application that allows users to type 
 - [ ] Cypress?
 - [x] Sass + Sasslint
 - [ ] Travis?
-- [ ] Create sample app with fake data
-- [ ] Check https://developer.github.com/v3/
-- [ ] Use data from GitHub API
+- [x] Check https://developer.github.com/v3/
+- [ ] Print data from GitHub API
 - [x] Loading indicator
-- [ ] Error Handler
+- [x] Error Handler
 - [x] Validation user name
 
 ### Improvments
+- [ ] Add debounce on click
 - [ ] Offline mode / Cache ?
 - [ ] IndexedDB?
 - [ ] Change to Redux - in on "redux" branch - has problem. Fix probably downgrade react. Make this task as last.

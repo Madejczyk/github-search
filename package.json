@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "tslint": "tslint -p tsconfig.json",
     "sasslint": "./node_modules/sass-lint/bin/sass-lint.js './src/**/*.scss' -v -q"
   },
@@ -37,6 +37,7 @@
     "webpack-cli": "3.3.8"
   },
   "dependencies": {
+    "isomorphic-fetch": "2.2.1",
     "react": "16.9.0",
     "react-dom": "16.9.0"
   }

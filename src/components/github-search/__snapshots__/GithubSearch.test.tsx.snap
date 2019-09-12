@@ -13,7 +13,7 @@ exports[`GithubSearch should has enable search button when username is changed 1
     class="search-input"
     placeholder="User name"
     type="text"
-    value="test"
+    value="madejczyk"
   />
   <input
     class="submit-button"
@@ -43,6 +43,76 @@ exports[`GithubSearch should initial contains disabled search button 1`] = `
     disabled=""
     type="submit"
     value="Search"
+  />
+</form>
+`;
+
+exports[`GithubSearch should set error when api returns error 1`] = `
+<form
+  class="github-search"
+>
+  <div
+    class="title"
+  >
+    GitHub User details
+  </div>
+  <input
+    class="search-input"
+    placeholder="User name"
+    type="text"
+    value="madejczy"
+  />
+  <input
+    class="submit-button"
+    type="submit"
+    value="Not Found"
+  />
+</form>
+`;
+
+exports[`GithubSearch should set loaded status when username is correct 1`] = `
+<form
+  class="github-search"
+>
+  <div
+    class="title"
+  >
+    GitHub User details
+  </div>
+  <input
+    class="search-input"
+    placeholder="User name"
+    type="text"
+    value="madejczyk"
+  />
+  <input
+    class="submit-button"
+    type="submit"
+    value="Sucess :)"
+  />
+</form>
+`;
+
+exports[`GithubSearch should set loading status after submit 1`] = `
+<form
+  class="github-search"
+>
+  <div
+    class="title"
+  >
+    GitHub User details
+  </div>
+  <input
+    class="search-input"
+    placeholder="User name"
+    type="text"
+    value="madejczyk"
+  />
+  <input
+    class="submit-button"
+    disabled=""
+    type="submit"
+    value="Loading ..."
   />
 </form>
 `;

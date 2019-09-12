@@ -5,6 +5,7 @@
     ],
     "jsRules": {},
     "rules": {
+        "no-var-requires": false,
         "interface-over-type-literal": false,
         "member-ordering": false
     },
