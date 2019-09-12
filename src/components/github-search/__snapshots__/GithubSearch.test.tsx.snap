@@ -90,6 +90,23 @@ exports[`GithubSearch should set loaded status when username is correct 1`] = `
     type="submit"
     value="Sucess :)"
   />
+  <div
+    class="user-details"
+  >
+    <div
+      class="user-name"
+    >
+      Jakub Madejczyk
+    </div>
+    <img
+      height="100"
+      src="https://avatars2.githubusercontent.com/u/11577626?v=4"
+      width="100"
+    />
+    <div
+      class="description"
+    />
+  </div>
 </form>
 `;
 

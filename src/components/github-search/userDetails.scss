@@ -1,0 +1,16 @@
+.user-details {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  .user-name {
+    font-size: $size;
+  }
+
+  .user-name,
+  .description {
+    color: $body-color;
+    padding: 8px;
+    text-align: center;
+  }
+}

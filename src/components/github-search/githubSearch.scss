@@ -38,4 +38,6 @@ $size: calc(16px + 16 * ((100vw - 320px) / 680));
       cursor: pointer;
     }
   }
+
+  @import 'userDetails';
 }

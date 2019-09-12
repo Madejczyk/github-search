@@ -2,6 +2,7 @@ import * as React from "react";
 import { SearchInput } from "./SearchInput";
 import { SubmitButton } from "./SubmitButton";
 import { Title } from "./Title";
+import { UserDetails, UserDetailsProps } from "./UserDetails";
 
 enum LoadingState {
     NOT_LOADED = "NOT_LOADED",
@@ -98,6 +99,11 @@ export class GithubSearch extends React.PureComponent<{}, GithubSearchState> {
                     isDisabled={this.isSubmitButtonDisabled()}
                     text={this.getSubmitButtonMessage()}
                 />
+                {
+                    this.state.userInfo && <UserDetails
+                        userInfo={this.state.userInfo}
+                    />
+                }
             </form>
         );
     }
