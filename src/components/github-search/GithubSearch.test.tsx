@@ -96,6 +96,12 @@ describe("GithubSearch", () => {
             expect(component.state()).toEqual({
                 errorMessage: "",
                 loadingState: "LOADED",
+                userInfo: {
+                    avatar_url: "https://avatars2.githubusercontent.com/u/11577626?v=4",
+                    bio: null,
+                    name: "Jakub Madejczyk",
+                    repos_url: "https://api.github.com/users/Madejczyk/repos",
+                },
                 userName: "madejczyk",
             });
             expect(component.render()).toMatchSnapshot();

@@ -19,7 +19,13 @@ enum SubmitButtonValue {
 
 type GithubSearchState = {
     errorMessage: string,
-    loadingState: LoadingState
+    loadingState: LoadingState,
+    userInfo?: {
+        avatar_url: string
+        bio: string | null,
+        name: string,
+        repos_url: string,
+    }
     userName: string,
 };
 
@@ -31,6 +37,7 @@ export class GithubSearch extends React.PureComponent<{}, GithubSearchState> {
         this.state = {
             errorMessage: "",
             loadingState: LoadingState.NOT_LOADED,
+            userInfo: undefined,
             userName: "",
         };
         this.onChange = this.onChange.bind(this);
@@ -57,7 +64,16 @@ export class GithubSearch extends React.PureComponent<{}, GithubSearchState> {
             });
         } else {
             const result = await response.json();
-            this.setState({loadingState: LoadingState.LOADED});
+            const {name, bio, avatar_url, repos_url} = result;
+            this.setState({
+                loadingState: LoadingState.LOADED,
+                userInfo: {
+                    avatar_url,
+                    bio,
+                    name,
+                    repos_url,
+                },
+            });
         }
     }
 

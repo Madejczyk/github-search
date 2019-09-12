@@ -29,4 +29,4 @@ Use GitHub REST API v3 to create a simple application that allows users to type 
 - [ ] Change to Redux - in on "redux" branch - has problem. Fix probably downgrade react. Make this task as last.
 
 ### Run
-Just run yarn webpack and open index.html file
+Just run yarn install && yarn webpack and open index.html file
