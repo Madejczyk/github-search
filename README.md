@@ -11,7 +11,7 @@ Use GitHub REST API v3 to create a simple application that allows users to type 
 - [x] Webpack
 - [x] TypeScript
 - [x] React
-- [ ] Redux?
+- [x] Redux?
 - [x] TSLint / Eslint
 - [x] Jest + Enzyme
 - [ ] Cypress?
@@ -23,6 +23,7 @@ Use GitHub REST API v3 to create a simple application that allows users to type 
 - [ ] Loading indicator
 - [ ] Error Handler
 - [x] Validation user name
+- [ ] Deploy
 
 ### Improvments
 - [ ] Offline mode / Cache ?

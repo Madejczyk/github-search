@@ -1,27 +1,26 @@
 import * as React from "react";
+import { connect } from "react-redux";
+import { AppState } from "../../store";
+import { searchUserName } from "./GithubSearchAction";
+import { LoadingState } from "./GithubSearchReducer";
 import { SearchInput } from "./SearchInput";
 import { SubmitButton } from "./SubmitButton";
 import { Title } from "./Title";
 
-enum LoadingState {
-    NOT_LOADED = "NOT_LOADED",
-    LOADING = "LOADING",
-    LOADED = "LOADED",
-    ERROR = "ERROR",
-}
-
 type GithubSearchState = {
-    loadingState: LoadingState
     userName: string,
+};
+
+type GithubSearchProps = {
+    loadingStatus: LoadingState;
 };
 
 const USERNAME_REGEX = /^[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}$/i;
 
-export class GithubSearch extends React.PureComponent<{}, GithubSearchState> {
-    constructor(props: {}) {
+class GithubSearchClass extends React.PureComponent<GithubSearchProps, GithubSearchState> {
+    constructor(props: GithubSearchProps) {
         super(props);
         this.state = {
-            loadingState: LoadingState.NOT_LOADED,
             userName: "",
         };
         this.onChange = this.onChange.bind(this);
@@ -33,7 +32,7 @@ export class GithubSearch extends React.PureComponent<{}, GithubSearchState> {
     }
 
     private handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-        this.setState({loadingState: LoadingState.LOADING});
+        // this.props.searchUserName(this.state.userName);
         event.preventDefault();
     }
 
@@ -48,7 +47,13 @@ export class GithubSearch extends React.PureComponent<{}, GithubSearchState> {
                 <SubmitButton
                     isDisabled={!USERNAME_REGEX.test(this.state.userName)}
                 />
+                {this.props.loadingStatus}
             </form>
         );
     }
 }
+const mapStateToProps = (state: AppState) => ({
+    loadingStatus: state.githubSearch.loadingStatus,
+});
+
+export const GithubSearch = connect(mapStateToProps)(GithubSearchClass);
