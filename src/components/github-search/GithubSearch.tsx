@@ -2,7 +2,7 @@ import * as React from "react";
 import { SearchInput } from "./SearchInput";
 import { SubmitButton } from "./SubmitButton";
 import { Title } from "./Title";
-import { UserDetails, UserDetailsProps } from "./UserDetails";
+import { UserDetails } from "./UserDetails";
 
 enum LoadingState {
     NOT_LOADED = "NOT_LOADED",
@@ -62,6 +62,7 @@ export class GithubSearch extends React.PureComponent<{}, GithubSearchState> {
             this.setState({
                 errorMessage: response.statusText,
                 loadingState: LoadingState.ERROR,
+                userInfo: undefined,
             });
         } else {
             const result = await response.json();
@@ -102,6 +103,7 @@ export class GithubSearch extends React.PureComponent<{}, GithubSearchState> {
                 {
                     this.state.userInfo && <UserDetails
                         userInfo={this.state.userInfo}
+                        userName={this.state.userName}
                     />
                 }
             </form>

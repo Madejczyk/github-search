@@ -106,6 +106,24 @@ exports[`GithubSearch should set loaded status when username is correct 1`] = `
     <div
       class="description"
     />
+    <i>
+      Most popular repositories:
+    </i>
+    <a
+      href="https://github.com/Madejczyk/github-search"
+    >
+      github-search
+    </a>
+    <a
+      href="https://github.com/Madejczyk/CV"
+    >
+      CV
+    </a>
+    <a
+      href="https://github.com/Madejczyk/Madejczyk.github.io"
+    >
+      Madejczyk.github.io
+    </a>
   </div>
 </form>
 `;

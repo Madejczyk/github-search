@@ -5,7 +5,7 @@ Use GitHub REST API v3 to create a simple application that allows users to type 
   * User name 
   * User description 
   * User avatar 
-  * Up to 3 links to most popular (by starts) user repositories 
+  * Up to 3 links to most popular (by stars) user repositories 
 
 ### ToDo:
 - [x] Webpack
@@ -17,7 +17,7 @@ Use GitHub REST API v3 to create a simple application that allows users to type 
 - [x] Sass + Sasslint
 - [ ] Travis?
 - [x] Check https://developer.github.com/v3/
-- [ ] Print data from GitHub API
+- [x] Print data from GitHub API
 - [x] Loading indicator
 - [x] Error Handler
 - [x] Validation user name

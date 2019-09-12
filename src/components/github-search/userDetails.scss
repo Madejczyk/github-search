@@ -1,5 +1,6 @@
 .user-details {
   align-items: center;
+  color: $body-color;
   display: flex;
   flex-direction: column;
 
@@ -9,8 +10,12 @@
 
   .user-name,
   .description {
-    color: $body-color;
     padding: 8px;
     text-align: center;
+  }
+
+  a {
+    color: $body-color;
+    text-decoration: none;
   }
 }
