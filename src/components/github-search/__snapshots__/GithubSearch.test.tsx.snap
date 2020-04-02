@@ -110,19 +110,19 @@ exports[`GithubSearch should set loaded status when username is correct 1`] = `
       Most popular repositories:
     </i>
     <a
-      href="https://github.com/Madejczyk/github-search"
+      href="https://github.com/Madejczyk/serverless"
     >
-      github-search
+      serverless
     </a>
     <a
-      href="https://github.com/Madejczyk/CV"
+      href="https://github.com/Madejczyk/nd9990-c3-microservices-v1"
     >
-      CV
+      nd9990-c3-microservices-v1
     </a>
     <a
-      href="https://github.com/Madejczyk/Madejczyk.github.io"
+      href="https://github.com/Madejczyk/udagram"
     >
-      Madejczyk.github.io
+      udagram
     </a>
   </div>
 </form>
